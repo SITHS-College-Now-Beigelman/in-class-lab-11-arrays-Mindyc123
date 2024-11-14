@@ -34,11 +34,11 @@ int main()
     //In the array, numbers 0-49 is equal to the component times 3
 
     
-    for (i = 0 ; i < 50; i++)
+    for (i = 0 ; i < 50; i++) //for numbers 0-49 in the array, their number will be outputted
         {
         cout << alpha [i] << " ";
     if (((i == 9) || (i == 19) || (i == 29) || (i == 39) || (i == 49)))
-        cout <<endl;
+        cout <<endl; //after every 10 numbers it will go to the next line
         }
 
     srand(time(0));
@@ -47,24 +47,24 @@ int main()
 
     for (index = 0; index < 50; index++)
     { 
-        alpha [index] = rand() % 100 + 1;
-        sum = sum + alpha[index];
+        alpha [index] = rand() % 100 + 1; //every number in the array is a random number from 1-100
+        sum = sum + alpha[index]; //Every random number is added to the sum
         
         if ( alpha [index] == 100 )
-            element = element + 1;
+            element = element + 1; //Every time the random number is 100, the variable element will increase
     }
 
-    for (index = 0 ; index < 50; index++)
+    for (index = 0 ; index < 50; index++) //Outputs each component of the array
         {
         cout << alpha [index] << " ";
     if (((index == 9) || (index == 19) || (index == 29) || (index == 39) || (index == 49)))
         cout <<endl;
         }
 
-        average = sum / 50;
+        average = sum / 50; //calculates the average of all the random numbers
 
-        cout << "The average is " << fixed << setprecision(2) << average <<endl;
-        cout << "There are " << element << " elements equal to 100" <<endl;
+        cout << "The average is " << fixed << setprecision(2) << average <<endl; //Outputs the average
+        cout << "There are " << element << " elements equal to 100" <<endl; //Outputs how many numbers are equal to 100
 
 
     return 0;
